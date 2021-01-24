@@ -1,0 +1,262 @@
+html{
+  font-size: 62.5%;
+  max-width: 1980px;
+  min-width: 320px;
+}
+
+body{
+    /* color: whitesmoke; */
+    padding-left: 10rem;
+    padding-right:10rem;
+    padding-top: 20rem;
+    background:#181818 ;
+    font-family: arial;
+    font-size: 1.4rem;
+    font-family: cursive,system-ui, Georgia, serif, sans-serif;
+    margin:0;
+    /* min-width: 100%; */
+    }
+
+
+#main{
+  margin: 0;
+  padding-top: 50%;
+  background: #34495e ;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#group{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#contact{
+  font-size:xx-large;
+  font-weight: bold;
+}
+
+.header{
+  height:30px;
+  width: calc(100%-300px); 
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+.gallery__item_big{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery__items {
+ display: grid;
+ gap:10px;
+ grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+}
+.gallery__item{
+position: relative;
+padding: 0 0 2% 0;
+}
+.gallery__item img{
+  position: relative ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  #img{
+    width: 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    margin:30px 0px 0 0px;
+    opacity: 1;
+    transition:all 1.5s ease 0s ;
+  
+  }
+  #img:active{
+      transform: translate(-100px,-100px);
+      opacity:0 ;
+    
+  }
+
+#call{
+    text-align: right;
+    margin-top: -4%;
+    animation-name: Change-color;
+    animation-duration: 10s;
+    animation-iteration-count: 100;
+    animation-direction: alternate; 
+}
+  @keyframes  Change-color {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+  
+
+#company{
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+}
+   
+.title{
+    text-align: right;
+    color: rgb(146, 146, 146);
+}
+
+#email{
+    color: rgb(62, 92, 228);
+}
+
+.topnav a{
+    float: right;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+    z-index: 1000;
+    
+  }
+.topnav a:hover {
+     border-bottom: 3px solid rgb(161, 0, 0);
+     background:slategrey;
+     border-top-left-radius: 55%;
+     border-top-right-radius:85%;
+  }
+
+.nav_link{
+     display: block;
+     font-size: 1.1rem;
+     text-decoration: uppercase;
+     color:white;
+     transition:background-color 03s linear ;
+     animation: .8s shake infinite alternate;
+     animation-name: shake;
+  }
+@keyframes shake {
+    0% { transform: skewX(-35deg); }
+    5% { transform: skewX(35deg); }
+    10% { transform: skewX(-35deg); }
+    15% { transform: skewX(35deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+}
+
+.nav_link:hover{
+     color:purple;
+     text-decoration: none;
+   }
+
+.nav_link:active{
+     font-style: oblique;
+     font-size: 17px;
+}
+.topnav a.active {
+     border-bottom: 3px solid red;
+}
+
+.middle{
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translatex(-50%);
+  display: flex;
+}
+
+.bar{
+  width: 40px;
+  height:10px;
+  border: 2px solid green;
+  margin: 4px;
+  cursor: -webkit-grab;
+  transition: 1.6s ;
+}
+
+.bar:hover{
+  background-color: white ;
+  opacity: 80%;
+  /* color: white; */
+  animation: bar 4s ease-in-out;
+  top: 10px;
+  transition-property: bar;
+}
+@keyframes bar {
+  
+ 30%{ box-shadow: 10px 20px 30px green;}
+}
+input[name="r"]{
+  position: sticky;
+  visibility: hidden;
+}
+
+.social_item{
+  margin: 1rem;
+  padding-top:34% ;
+}
+  
+.fa {
+  margin: 10px;
+    padding: 20px;
+    /* font-size: 100px; */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.6;
+    color:yellow;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+  
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+
+.footer__copy{
+  background-color:#808080 ;
+ 
+}
